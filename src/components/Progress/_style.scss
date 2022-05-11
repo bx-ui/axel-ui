@@ -1,0 +1,20 @@
+.axel-progress-bar {
+  box-sizing: border-box;
+  width: 100%;
+  .axel-progress-outer {
+    width: 100%;
+    position: relative;
+    background-color: $progress-bg;
+    color: $progress-bar-color;
+    .axel-progress-inner {
+      border-radius: $progress-border-radius;
+      padding: 0 12px;
+    }
+  }
+}
+
+@each $key,$val in $theme-colors {
+  .color-#{$key} {
+    background-color: $val;
+  }
+}

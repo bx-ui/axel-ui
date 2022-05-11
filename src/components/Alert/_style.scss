@@ -1,0 +1,55 @@
+.axel-alert {
+  display: block;
+  font-family: $font-family-base;
+  padding: $alert-padding-y $alert-padding-x;
+  border: $alert-border-width solid transparent;
+  border-radius: $alert-border-radius;
+  position: relative;
+  &.hide {
+    display: none;
+  }
+  .alert-message {
+    font-size: $alert-message-font-size;
+    font-weight: $alert-message-font-weight;
+    display: flex;
+    margin-bottom: 4px;
+    .message {
+      flex: 1;
+    }
+  }
+  .alert-description {
+    font-size: $alert-description-font-size;
+    line-height: $line-height-base;
+  }
+  .alert-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    line-height: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: lighten($black, 80%);
+    }
+  }
+}
+
+.alert-primary {
+  @include alert-type($primary, $black)
+}
+
+.alert-success {
+  @include alert-type($success, $black)
+}
+
+.alert-warning {
+  @include alert-type($warning, $black)
+}
+
+.alert-danger {
+  @include alert-type($danger, $black)
+}

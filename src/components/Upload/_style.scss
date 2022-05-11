@@ -1,0 +1,41 @@
+.axel-upload-list {
+  padding-left: 10px;
+  list-style: none;
+  width:auto;
+  position: relative;
+}
+
+
+.axel-upload-list-item {
+  cursor: pointer;
+  min-width: 200px;
+  line-height: 1.7;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+ .file-name {
+   font-size: 16px;
+   margin-right: 40px;
+   .file-alit-icon {
+     margin-right: 6px;
+   }
+ }
+ .file-actions {
+   display: none;
+ }
+ &:hover {
+   background-color: $gray-200;
+   .file-stauts {
+     display: none;
+   }
+   .file-actions {
+     display: inline-block;
+   }
+ }
+}
+
+@each $key,$val in $uploadFile-colors {
+  .file-name-#{$key} {
+    color: $val
+  }
+}

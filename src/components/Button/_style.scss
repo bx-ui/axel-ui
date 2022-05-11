@@ -1,0 +1,51 @@
+.axel-button {
+  font-family: $btn-font-family;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  background-image: none;
+  border: $btn-border-width solid transparent;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 5px;
+  &:focus {
+    outline: none
+  }
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
+  }
+}
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+.btn-primary {
+  @include button-type($primary, $primary, $white)
+}
+
+.btn-danger {
+  @include button-type($danger, $danger, $white)
+}
+
+.btn-success {
+  @include button-type($success, $success, $white)
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.btn-circle {
+  border-radius: 50%;
+}
