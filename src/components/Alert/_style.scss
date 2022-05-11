@@ -5,6 +5,7 @@
   border: $alert-border-width solid transparent;
   border-radius: $alert-border-radius;
   position: relative;
+  margin-bottom: 10px;
   &.hide {
     display: none;
   }

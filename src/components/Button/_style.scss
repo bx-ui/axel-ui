@@ -49,3 +49,9 @@
 .btn-circle {
   border-radius: 50%;
 }
+
+.btn-loading {
+  opacity: $btn-disabled-opacity;
+  pointer-events: none;
+  cursor: none;
+}

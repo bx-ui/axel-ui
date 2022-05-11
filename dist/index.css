@@ -365,6 +365,23 @@ main {
   transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
   transform-origin: center bottom; }
 
+.info-table, .info-table td, .info-table th {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  color: #444;
+  margin-top: .25rem;
+  padding-right: .5rem;
+  padding: .25rem;
+  text-align: left;
+  vertical-align: top; }
+
+.info-table {
+  width: 100%; }
+
+.info-table-monospace {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: .88em; }
+
 .axel-button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   padding: 0.375rem 0.75rem;

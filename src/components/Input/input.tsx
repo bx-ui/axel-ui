@@ -8,8 +8,11 @@ type InputSize = 'lg' | 'sm'
 type InputIconTheme = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'light' | 'dark'
 
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size'> {
+  /** input尺寸 */
   size?: InputSize;
+  /** input图标 */
   icon?: IconProp;
+  /** 图标主题 */
   iconTheme?: InputIconTheme;
   prepend?: string | ReactElement;
   append?: string | ReactElement;
@@ -18,7 +21,13 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
   clearabled?: boolean;
 }
 
-const Input: FC<InputProps> = (props) => {
+/**
+ * 1111
+ * ~~~js
+ * import { Input } from 'axel-ui'
+ * ~~~
+ */
+export const Input: FC<InputProps> = (props) => {
   const {
     size,
     className,
@@ -79,7 +88,7 @@ const Input: FC<InputProps> = (props) => {
 }
 
 Input.defaultProps = {
-  clearabled: true
+  clearabled: false
 }
 
 export default Input

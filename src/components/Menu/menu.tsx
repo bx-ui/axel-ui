@@ -26,7 +26,7 @@ export interface MenuProps {
 
 export const MenuContext = createContext<IMenuContext>({ index: '0' })
 
-const Menu: FC<MenuProps> = (props) => {
+export const Menu: FC<MenuProps> = (props) => {
   const { className, mode, children, style, defaultIndex, onChange, relationParentActive } = props
   const [currentIndex, setIndex] = useState<string>(defaultIndex as string)
   const classes = classNames('axel-menu', className, {
