@@ -22,9 +22,18 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import classNames from "classnames";
-var Button = function (props) {
+import Icon from '../Icon';
+/**
+ * 页面中最常用的的按钮元素，适合于完成特定的交互
+ * ### 引用方法
+ *
+ * ~~~js
+ * import { Button } from 'vikingship'
+ * ~~~
+ */
+export var Button = function (props) {
     var _a;
-    var className = props.className, disabled = props.disabled, size = props.size, btnType = props.btnType, children = props.children, href = props.href, block = props.block, style = props.style, shape = props.shape, resetProps = __rest(props, ["className", "disabled", "size", "btnType", "children", "href", "block", "style", "shape"]);
+    var className = props.className, disabled = props.disabled, size = props.size, btnType = props.btnType, children = props.children, href = props.href, block = props.block, style = props.style, shape = props.shape, loading = props.loading, prependIcon = props.prependIcon, appendIcon = props.appendIcon, resetProps = __rest(props, ["className", "disabled", "size", "btnType", "children", "href", "block", "style", "shape", "loading", "prependIcon", "appendIcon"]);
     var classes = classNames('axel-button', className, (_a = {
             'disabled': disabled
         },
@@ -32,11 +41,16 @@ var Button = function (props) {
         _a["btn-".concat(btnType)] = btnType,
         _a['btn-block'] = block,
         _a["btn-".concat(shape)] = shape,
+        _a['btn-loading'] = loading,
         _a));
     if (btnType === 'link' && href) {
         return (React.createElement("a", __assign({ href: href, className: classes }, resetProps, { style: style }), children));
     }
-    return (React.createElement("button", __assign({ className: classes }, resetProps, { style: style }), children));
+    return (React.createElement("button", __assign({ className: classes }, resetProps, { style: style }),
+        loading && React.createElement(Icon, { icon: "spinner", spin: true }),
+        (!loading && prependIcon) && React.createElement(Icon, { icon: prependIcon }),
+        children,
+        (!loading && appendIcon) && React.createElement(Icon, { icon: appendIcon })));
 };
 Button.defaultProps = {
     disabled: false,

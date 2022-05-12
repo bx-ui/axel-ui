@@ -23,7 +23,16 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-var Icon = function (props) {
+/**
+ * 图标暂时不会列举到文档中， 如有需要请移步: https://fontawesome.com/icons/abacus?s=thin
+ * 下个版本会在本文档更新
+ * ### 引用方法
+ *
+ * ~~~js
+ * import { Icon } from 'axel-ui'
+ * ~~~
+ */
+export var Icon = function (props) {
     var _a;
     var theme = props.theme, className = props.className, resetProps = __rest(props, ["theme", "className"]);
     var classes = classNames('axel-icon', className, (_a = {},

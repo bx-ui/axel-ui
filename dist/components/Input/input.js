@@ -23,7 +23,13 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Icon from '../Icon/icon';
-var Input = function (props) {
+/**
+ * 1111
+ * ~~~js
+ * import { Input } from 'axel-ui'
+ * ~~~
+ */
+export var Input = function (props) {
     var _a;
     var size = props.size, className = props.className, style = props.style, icon = props.icon, clearabled = props.clearabled, prepend = props.prepend, append = props.append, iconTheme = props.iconTheme, onChange = props.onChange, restProps = __rest(props, ["size", "className", "style", "icon", "clearabled", "prepend", "append", "iconTheme", "onChange"]);
     var _b = useState(""), value = _b[0], setValue = _b[1];
@@ -57,6 +63,6 @@ var Input = function (props) {
         append && React.createElement("div", { className: "axel-input-group-append" }, append)));
 };
 Input.defaultProps = {
-    clearabled: true
+    clearabled: false
 };
 export default Input;

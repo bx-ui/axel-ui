@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 import classNames from 'classnames';
 export var MenuContext = createContext({ index: '0' });
-var Menu = function (props) {
+export var Menu = function (props) {
     var _a;
     var className = props.className, mode = props.mode, children = props.children, style = props.style, defaultIndex = props.defaultIndex, onChange = props.onChange, relationParentActive = props.relationParentActive;
     var _b = useState(defaultIndex), currentIndex = _b[0], setIndex = _b[1];

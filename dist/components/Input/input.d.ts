@@ -3,8 +3,11 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 declare type InputSize = 'lg' | 'sm';
 declare type InputIconTheme = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'light' | 'dark';
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size'> {
+    /** input尺寸 */
     size?: InputSize;
+    /** input图标 */
     icon?: IconProp;
+    /** 图标主题 */
     iconTheme?: InputIconTheme;
     prepend?: string | ReactElement;
     append?: string | ReactElement;
@@ -12,5 +15,11 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
     style?: CSSProperties;
     clearabled?: boolean;
 }
-declare const Input: FC<InputProps>;
+/**
+ * 1111
+ * ~~~js
+ * import { Input } from 'axel-ui'
+ * ~~~
+ */
+export declare const Input: FC<InputProps>;
 export default Input;

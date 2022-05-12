@@ -1,6 +1,6 @@
 {
   "name": "axel-ui",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -43,6 +43,8 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
+    "test:nowatch": "cross-env CI=true react-scripts test",
+    "lint": "eslint --ext js,ts,tsx src --max-warnings 15",
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -51,6 +53,11 @@
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -81,18 +88,6 @@
     ]
   },
   "devDependencies": {
-    "@types/classnames": "^2.3.1",
-    "@types/jest": "^27.5.0",
-    "@types/node": "^16.11.33",
-    "@types/react": "^18.0.8",
-    "@types/react-dom": "^18.0.3",
-    "@types/react-transition-group": "^4.4.4",
-    "node-sass": "^7.0.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.6.4",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "rimraf": "^3.0.2",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-info": "^5.3.21",
@@ -104,9 +99,22 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^16.11.33",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "@types/react-transition-group": "^4.4.4",
     "@types/storybook__addon-info": "^5.2.4",
     "add": "^2.0.6",
+    "husky": "^8.0.1",
+    "node-sass": "^7.0.1",
+    "react": "^18.1.0",
     "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4",
     "webpack": "^5.72.1",
     "yarn": "^1.22.18"
   }

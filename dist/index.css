@@ -365,6 +365,20 @@ main {
   transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
   transform-origin: center bottom; }
 
+.modal-enter {
+  opacity: 0;
+  transition: all .2s ease-in; }
+
+.modal-enter-active {
+  opacity: 1; }
+
+.modal-exit {
+  opacity: 1;
+  transition: all .2s ease-out; }
+
+.modal-exit-active {
+  opacity: 0; }
+
 .info-table, .info-table td, .info-table th {
   border-collapse: collapse;
   border: 1px solid #ccc;
@@ -471,13 +485,19 @@ main {
 .btn-circle {
   border-radius: 50%; }
 
+.btn-loading {
+  opacity: 0.65;
+  pointer-events: none;
+  cursor: none; }
+
 .axel-alert {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   padding: 1rem 1.2rem;
   border: 1px solid transparent;
   border-radius: 4px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 10px; }
   .axel-alert.hide {
     display: none; }
   .axel-alert .alert-message {
@@ -811,3 +831,59 @@ main {
 
 .color-dark {
   background-color: #343a40; }
+
+.axel-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; }
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.body-overflow-hidden {
+  overflow: hidden; }
+
+.modal-content {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 600px;
+  background-color: #fff;
+  z-index: 1003;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .modal-content .modal-content-header {
+    line-height: 2;
+    font-size: 16px;
+    border-bottom: 1px solid #e9ecef;
+    padding: 10px 24px;
+    position: relative; }
+    .modal-content .modal-content-header svg {
+      font-size: 18px;
+      position: absolute;
+      right: 28px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer; }
+      .modal-content .modal-content-header svg:hover {
+        color: #0d6efd; }
+  .modal-content .modal-content-container {
+    padding: 12px 24px;
+    min-height: 200px; }
+  .modal-content .modal-content-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: flex-end; }

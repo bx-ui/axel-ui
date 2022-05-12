@@ -304,3 +304,16 @@ $uploadFile-colors:
   "success":    $success,
   "error":       $danger
 );
+
+// Modal
+$modalOvrtlayBg: rgba(0,0,0,0.4) !default;
+
+$modal-padding-x: 24px !default;
+$modal-padding-y: 4px !default;
+$modal-box-shadow: $box-shadow !default;
+
+$modal-default-font-size: $font-size-base !default;
+$modal-title-font-weight: $font-weight-bold !default;
+$modal-border-radius: 4px !default;
+$modal-border-line-width: 1px !default;
+$modal-border-line-background: $gray-200 !default;

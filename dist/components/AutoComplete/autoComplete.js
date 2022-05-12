@@ -27,7 +27,7 @@ import Icon from '../Icon/icon';
 import useDebounce from '../../hooks/useDebounce';
 import useClickOutside from '../../hooks/useClickOutSide';
 import Transition from '../Transition/transition';
-var AutoComplete = function (props) {
+export var AutoComplete = function (props) {
     var fetchSuggestions = props.fetchSuggestions, onSelect = props.onSelect, renderOption = props.renderOption, restProps = __rest(props, ["fetchSuggestions", "onSelect", "renderOption"]);
     var _a = useState(''), inputValue = _a[0], setInputValue = _a[1];
     var _b = useState([]), suggestions = _b[0], setSuggestions = _b[1];

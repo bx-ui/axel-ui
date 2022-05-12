@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Transition from '../Transition/transition';
-var Alert = function (props) {
+export var Alert = function (props) {
     var _a;
     var className = props.className, type = props.type, style = props.style, message = props.message, description = props.description, showIcon = props.showIcon, closeable = props.closeable, onClose = props.onClose;
     var _b = useState(true), showAlert = _b[0], setShowAlert = _b[1];

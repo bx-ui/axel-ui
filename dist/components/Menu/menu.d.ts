@@ -18,5 +18,5 @@ export interface MenuProps {
     relationParentActive?: boolean;
 }
 export declare const MenuContext: React.Context<IMenuContext>;
-declare const Menu: FC<MenuProps>;
+export declare const Menu: FC<MenuProps>;
 export default Menu;
